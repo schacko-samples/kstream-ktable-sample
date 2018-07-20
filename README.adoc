@@ -13,4 +13,4 @@ Start the application: KstreamKtableSampleApplication
 
 Then start either of the 2 drivers provided: SendToStreamTopic or SendToTableTopic
 
-Watch the console on the main application. It simply logs the fact the method was activated through either of the drivers and print the key/value sent to the topic. 
+Watch the console on the main application. It simply logs the fact that the method was activated through either of the drivers and print the key/value sent to the topic.
