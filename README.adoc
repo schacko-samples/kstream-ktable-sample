@@ -1,0 +1,16 @@
+== Basic demo for using KStream and KTable as inputs on the same StreamListener method
+
+This is an application that demonstrates how you can bind to both KStream and KTable in a single StreamListener method.
+Both KStream and KTable are backed by separate topics.
+
+=== Running the app:
+
+This application is intended to run from an IDE as this contains multiple Boot applications (drivers for testing in addition to the main app)
+
+Make sure that you have Kafka running (The app expects to run on default ports on localhost. If that is not the case, change the configuraion in the yaml file)
+
+Start the application: KstreamKtableSampleApplication
+
+Then start either of the 2 drivers provided: SendToStreamTopic or SendToTableTopic
+
+Watch the console on the main application. It simply logs the fact the method was activated through either of the drivers and print the key/value sent to the topic. 

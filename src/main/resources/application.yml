@@ -1,0 +1,23 @@
+spring.cloud.stream.bindings.kstreamInput:
+  destination: streamIn
+  consumer:
+    useNativeDecoding: true
+spring.cloud.stream.bindings.ktableInput:
+  destination: tableIn
+  consumer:
+    useNativeDecoding: true
+spring.cloud.stream.kafka.streams.bindings.kstreamInput:
+  consumer:
+    keySerde: org.apache.kafka.common.serialization.Serdes$StringSerde
+    valueSerde: org.apache.kafka.common.serialization.Serdes$LongSerde
+spring.cloud.stream.kafka.streams.bindings.ktableInput:
+  consumer:
+    keySerde: org.apache.kafka.common.serialization.Serdes$StringSerde
+    valueSerde: org.apache.kafka.common.serialization.Serdes$StringSerde
+spring.cloud.stream.kafka.streams.binder:
+  brokers: localhost
+  zkNodes: localhost
+  configuration:
+    default.key.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+    default.value.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+    commit.interval.ms: 1000
